@@ -2,9 +2,11 @@
   "name": "nonmem-utils",
   "version": "0.0.0",
   "description": "utility functions for handling nonmem results",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "./node_modules/.bin/babel-tape-runner ./tests/**/*-test.js | ./node_modules/.bin/tap-spec"
+    "test": "./node_modules/.bin/babel-tape-runner ./tests/**/*-test.js | ./node_modules/.bin/tap-spec",
+    "compile": "babel --optional runtime -d lib/ src/",
+    "prepublish": "npm run compile"
   },
   "repository": {
     "type": "git",
